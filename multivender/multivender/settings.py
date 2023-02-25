@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+   # 'core',
+   # 'store',
+   # 'userprofile',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +54,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'multivender.urls'
 
+WEBSITE_URL = 'http://127.0.0.1:8002/'
+
+STRIPE_PUB_KEY = 'pk_test_51HIHiuKBJV2qfWbDh2lEbabbfNVwnf4TTabNQOtTD2F8z44uMesvkKpKXCUFUePNKpZ99JSORZh6gsa17IhfV30U00P9iFVCqQ'
+STRIPE_SECRET_KEY = 'sk_test_51HIHiuKBJV2qfWbDvOA4nKbkuus4jNey2ePMXwoyf6cRwMRaQIPZ1VpAeWThUU85wbfLSUbHf7w5yJmvhtH5HHai00J6IfUBEA'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -62,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'store.context_processors.cart',
             ],
         },
     },
@@ -83,7 +92,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -116,6 +124,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
