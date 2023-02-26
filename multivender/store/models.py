@@ -1,5 +1,10 @@
+from statistics import mode
+from django.contrib.auth.models import User
 from django.db import models
-
+from django.core.files import File
+from django.db import models
+from io import BytesIO
+from PIL import Image
 # Create your models here.
 class Order(models.Model):
     first_name = models.CharField(max_length=255)
