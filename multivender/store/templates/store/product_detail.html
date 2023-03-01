@@ -4,13 +4,13 @@
 
 {% block meta %}
 <meta name="description" content="{{ product.description }}">
-<meta name="author" content="PetNet Stein">
-<meta property="og:title" content="PetNet | {{ product.title }}">
+<meta name="author" content="JAMADRAC VECTOR">
+<meta property="og:title" content="JAMADRAC | {{ product.title }}">
 <meta property="og:description" content="{{ product.description }}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://petnet.com{% url 'product_detail' product.category.slug product.slug %}">
+<meta property="og:url" content="http://JAMADRAC.com{% url 'product_detail' product.category.slug product.slug %}">
 {% if product.image %}
-<meta property="og:image" content="http://petnet.com{{ product.image.url }}">
+<meta property="og:image" content="http://JAMADRAC.com{{ product.image.url }}">
 {% endif %}
 {% endblock %}
 
