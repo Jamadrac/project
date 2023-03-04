@@ -5,7 +5,9 @@
 {% block title %}
 Welcome
 {% endblock %}
-
+{% for category in categories %}
+                            <a href="{% url 'category_detail' category.slug %}" class="nav-item nav-link active">{{ category.title }}</a>
+                            {% endfor %}
 {% block content %}
     <div class="flex flex-wrap">
         {% for product in products %}
